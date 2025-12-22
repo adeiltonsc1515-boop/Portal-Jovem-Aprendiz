@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { UserRole, ProtocolData, Company, User } from './types';
-import { refineReportDescription } from './geminiService';
+import { UserRole, ProtocolData, Company, User } from './types.ts';
+import { refineReportDescription } from './geminiService.ts';
 
 const App: React.FC = () => {
   const [role, setRole] = useState<UserRole>(null);
@@ -83,7 +83,7 @@ const App: React.FC = () => {
       }
 
       const newUser: User = {
-        nome: authForm.empresa, // Usamos o nome da empresa como identificador visual principal
+        nome: authForm.empresa,
         identificacao: authForm.identificacao,
         senha: authForm.senha,
         role: role,
